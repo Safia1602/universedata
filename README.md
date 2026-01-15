@@ -15,7 +15,7 @@ scrap.py: scraping of job postings (raw CSV export).
 
 import_csv.py: data import/initialization (e.g. for deployment on Render).
 
-Datasets: provided via a Google Drive link, to be placed in the expected folder (e.g. data/).
+Datasets: provided via a Google Drive link, to be placed in the expected folder (e.g. data/). https://drive.google.com/drive/folders/1ojogPjALjwyyZnL9YKY_8YQZRcP8vUkx?usp=sharing
 
 2. Main Pages
 
