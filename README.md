@@ -1,4 +1,11 @@
-Flask-based platform to explore the data job market using scraped job postings that are cleaned and visualized interactively (dashboards, advanced filters, semantic map).
+This project analyzes job offers in the data field to uncover typical patterns across companies, skills, and regions. It combines descriptive statistics, text mining, and clustering methods to reveal how jobs naturally group together. The core idea is to build a living observatory that captures, structures, and visualizes market trends in real time — turning thousands of job descriptions into an intelligible map.
+
+This project also has a deployed version on Render using the free tier: https://datauniverse.onrender.com
+Due to the constraints of the free plan (limited resources, cold starts, and timeouts), the online app runs a minimal version of the project, with only about 1,000 job records and several missing columns to keep the interface responsive.
+This deployed instance does not reflect the full analytical scope or data richness of the final project; it is provided mainly as a lightweight demo and may experience occasional slowness or interruptions.
+
+For this reason, you are strongly encouraged to run the application locally to access all the intended features and the full dataset.
+Simply install Flask (and the other dependencies), run app.py (or start the app with flask run), then click on the URL shown in the terminal: you will get the complete version of the site running on your own machine.
 
 1. Structure
 app.py: Flask application, defines routes for all pages.
