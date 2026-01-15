@@ -7,7 +7,9 @@ templates/: HTML pages (index, Big Picture, Job Explorer, Data Job Observatory, 
 
 static/: CSS, JS (D3, filtering and chart logic), images, videos.
 
-data.py / pipeline.py: dataset loading, cleaning, normalization, and preparation of tables for API endpoints.
+data.py / pipeline.py: dataset loading, cleaning and normalization
+
+data_cluster.py: applies BERTopic to a dataset of job postings to extract semantic topics, project documents into a 2D UMAP space, and generate two structured CSV files (topics_bertopic.csv and jobs_for_d3.csv) for analysis and interactive visualization.
 
 scrap.py: scraping of job postings (raw CSV export).
 
