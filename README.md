@@ -20,7 +20,7 @@ data_cluster.py: applies BERTopic to a dataset of job postings to extract semant
 
 scrap.py: scraping of job postings (raw CSV export).
 
-import_csv.py: data import/initialization (e.g. for deployment on Render).
+import_csv.py: data import/initialization (e.g. for deployment on Render). (in this code, all the conditions are important. Any modification or removal of these conditions may break the pipeline.)
 
 Datasets: provided via a Google Drive link, to be placed in the expected folder (e.g. data/). https://drive.google.com/drive/folders/1ojogPjALjwyyZnL9YKY_8YQZRcP8vUkx?usp=sharing
 
