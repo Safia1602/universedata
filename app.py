@@ -77,10 +77,10 @@ def load_stats_df() -> pd.DataFrame:
 
     df = pd.read_csv(
         STATS_PATH,
-     sep=",",                 # séparateur réel
-    quotechar='"',           # champs entre guillemets
-    escapechar="\\",         # pour \\n, \\\\b, etc.
-    engine="python",         # indispensable pour texte long
+     sep=",",                 
+    quotechar='"',           
+    escapechar="\\",         # for \\n, \\\\b
+    engine="python",         
     encoding="utf-8",
     on_bad_lines="error"
     )
@@ -102,14 +102,14 @@ def load_stats_df() -> pd.DataFrame:
         if col not in df.columns:
             df[col] = ""
 
-    # Normalisations types
+    # Normalisation types
     df["salary_value"] = df["salary_value"].apply(to_float)
     df["experience_years"] = df["experience_years"].apply(to_float)
 
     df["hybrid_policy"] = df["hybrid_policy"].apply(to_bool)
     df["visa_sponsorship"] = df["visa_sponsorship"].apply(to_bool)
 
-    # Normalisations listes 
+    # Normalisation lists
     list_cols = [
         "technical_skills", "tools_used", "soft_skills", "tasks",
         "domains", "benefits", "tone_culture", "eeo_terms"
@@ -150,15 +150,15 @@ def load_d3_df() -> pd.DataFrame:
 
 STATS_DF = load_stats_df()
 D3_DF = load_d3_df()
-print(f"✅ Stats dataset chargé : {len(STATS_DF)} lignes")
-print(f"✅ D3 dataset chargé : {len(D3_DF)} lignes")
+print(f"Stats dataset charged : {len(STATS_DF)} lignes")
+print(f"D3 dataset charged : {len(D3_DF)} lignes")
 
 
 # HTML ROUTES
 
 @app.route("/")
-def observatoire():
-    return render_template("observatoire.html")
+def startup():
+    return render_template("startup.html")
 
 
 @app.route("/explorateur")
@@ -171,9 +171,9 @@ def tendances():
     return render_template("tendances.html")
 
 
-@app.route("/startup")
-def startup():
-    return render_template("startup.html")
+@app.route("/observatoire")
+def observatoire():
+    return render_template("observatoire.html")
 
 
 @app.route("/explanation")
